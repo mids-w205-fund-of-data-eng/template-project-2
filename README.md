@@ -22,7 +22,7 @@ history > <user-name>-history.txt
 ```
 
 You can either run Spark through the command line or use a notebook. If you use
-the command line, add an annotated mardown file where you present your results,
+the command line, add an annotated markdown file where you present your results,
 tools used, and explanations of the commands that you use. 
 
 You should be able to query your data at the end. 
