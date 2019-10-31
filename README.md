@@ -14,16 +14,22 @@ to be to be queried.  You will need to:
 - Use Spark to transform the messages. 
 - Use Spark to transform the messages so that you can land them in HDFS
 
-You should include your `docker-compose.yml` used for spinning the pipeline.
+You should include your `docker-compose.yml` used for spinning the pipeline. One example is enough!
 
 Also, include the history of your console by running
 ```
 history > <user-name>-history.txt
 ```
+Do not alter the history file, submit it as is! Select the lines you seem relevant and paste them into your report.
 
 You can either run Spark through the command line or use a notebook. If you use
-the command line, add an annotated mardown file where you present your results,
+the command line, add an annotated markdown file where you present your results,
 tools used, and explanations of the commands that you use. 
+To get the history from Spark run
+
+```
+docker-compose exec spark cat /root/.python_history
+```
 
 You should be able to query your data at the end. 
 
@@ -34,6 +40,7 @@ you believe they might need to answer about these data.
 What you will turn in is a report like for Project 1 describing these queries
 and your spark SQL that you used to answer them and how you had to transform
 the data in order to answer them.
+Comment you code with explanations of what you do, especially the steps to spin up your pipeline.
 
 ## Data
 
@@ -43,18 +50,27 @@ curl -L -o assessment-attempts-20180128-121051-nested.json https://goo.gl/ME6hjp
 ```
 
 Note on the data: This dataset is much more complicated than the one we'll
-cover in the live sessions. Is a nested JSON file, where you need to unwrap it
+cover in the live sessions. It is a nested JSON file, where you need to unwrap it
 carefully to understand what's really being displayed. There are many fields
 that are not that important for your analysis, so don't be afraid of not using
-them. The main problem will be the multiple questions field. We recommend for
+them. The main problem will be the multiple questions field. Think about what the 
+problem is here and give your thoughts. We recommend for
 you to read schema implementation in Spark [Here is the documenation from
-Apache](https://spark.apache.org/docs/2.3.0/sql-programming-guide.html)
+Apache](https://spark.apache.org/docs/2.3.0/sql-programming-guide.html).
+It is NOT necessary to get to that data.
 
 Here are some example questions that would be useful to know
 
 1. How many assesstments are in the dataset?
 2. What's the name of your Kafka topic? How did you come up with that name?
 3. How many people took *Learning Git*?
-4. What are the average grades for each course with its standard deviation?
-5. What is the least common course taken? And the most common?
-6. Add any query(ies) you think will help the data science team
+4. What is the least common course taken? And the most common?
+5. Add any query(ies) you think will help the data science team
+
+## Files you submit
+
+- <user-name>-history.txt 
+- One example of your docker-compose.yml files
+- Either:
+  - your Jupyter notebook or
+  - the spark history file and an annotations file in markdown format that serves as your report
