@@ -31,9 +31,13 @@ In order to show the data scientists at these other companies the kinds of data
 that they will have access to, decide on 1 to 3 basic business questions that
 you believe they might need to answer about these data.
 
-What you will turn in is a report like for Project 1 describing these queries
-and your spark SQL that you used to answer them and how you had to transform
-the data in order to answer them.
+## What you turn in
+- Your history file (see above)
+- A report either as a markdown file or a jupyter notebook
+- Any other files needed for the project, e.g., your docker-compose.yml, scripts used, etc
+- Make sure you have a good structure in your git repo and explain your repo in the README.
+
+The report should describe your queries and spark SQL to answer business questions that you select. Describe your assumptions, your thinking, what the parts of the pipeline do. What is given? What do you set up yourself? Talk about the data. What issues do you find with the data? Do you find ways to solve it? How? If not describe what the problem is.
 
 ## Data
 
@@ -43,14 +47,14 @@ curl -L -o assessment-attempts-20180128-121051-nested.json https://goo.gl/ME6hjp
 ```
 
 Note on the data: This dataset is much more complicated than the one we'll
-cover in the live sessions. Is a nested JSON file, where you need to unwrap it
+cover in the live sessions. It is a nested JSON file, where you need to unwrap it
 carefully to understand what's really being displayed. There are many fields
 that are not that important for your analysis, so don't be afraid of not using
 them. The main problem will be the multiple questions field. We recommend for
 you to read schema implementation in Spark [Here is the documenation from
 Apache](https://spark.apache.org/docs/2.3.0/sql-programming-guide.html)
 
-Here are some example questions that would be useful to know
+Here are some example questions that would be useful to know, but you again, you choose your own (1 to 3).These examples are meant to get you started/thinking.
 
 1. How many assesstments are in the dataset?
 2. What's the name of your Kafka topic? How did you come up with that name?
