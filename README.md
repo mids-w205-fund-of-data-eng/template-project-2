@@ -52,7 +52,8 @@ you believe they might need to answer about these data.
 
 - Make sure you have a good structure in your git repo and explain your repo in the README.
 
-Comment you code with explanations of what you do, especially the steps to spin up your pipeline.
+Comment your code with explanations of what you do, especially the steps to spin up your pipeline, i.e., explain your pipeline!<br>
+Your report should be one report for all the parts. You can - again - follow along week by week but in the end your report should be one for the whole project.
 
 
 ## Data
@@ -87,3 +88,38 @@ Here are some example questions that would be useful to know, but again, you cho
 - Either:
   - your Jupyter notebook or
   - the spark history file and an annotations file in markdown format that serves as your report
+
+---
+  
+#### GitHub Procedures
+
+In your Python class you used GitHub, with a single repo for all assignments, where you committed without doing a pull request.  In this class, we will try to mimic the real world more closely, so our procedures will be enhanced. 
+
+Each project, including this one, will have it's own repo.
+
+Important:  In w205, please never merge your assignment branch to the master branch. 
+
+Using the git command line: clone down the repo, leave the master branch untouched, create an assignment branch, and move to that branch:
+- Open a linux command line to your virtual machine and be sure you are logged in as jupyter.
+- Create a ~/w205 directory if it does not already exist `mkdir ~/w205`
+- Change directory into the ~/w205 directory `cd ~/w205`
+- Clone down your repo `git clone <https url for your repo>`
+- Change directory into the repo `cd <repo name>`
+- Create an assignment branch `git branch assignment`
+- Checkout the assignment branch `git checkout assignment`
+
+The previous steps only need to be done once.  Once you your clone is on the assignment branch it will remain on that branch unless you checkout another branch.
+
+The project workflow follows this pattern, which may be repeated as many times as needed.  In fact it's best to do this frequently as it saves your work into GitHub in case your virtual machine becomes corrupt:
+- Make changes to existing files as needed.
+- Add new files as needed
+- Stage modified files `git add <filename>`
+- Commit staged files `git commit -m "<meaningful comment about your changes>"`
+- Push the commit on your assignment branch from your clone to GitHub `git push origin assignment`
+
+Once you are done, go to the GitHub web interface and create a pull request comparing the assignment branch to the master branch.  Add your instructor, and only your instructor, as the reviewer.  The date and time stamp of the pull request is considered the submission time for late penalties. 
+
+If you decide to make more changes after you have created a pull request, you can simply close the pull request (without merge!), make more changes, stage, commit, push, and create a final pull request when you are done.  Note that the last data and time stamp of the last pull request will be considered the submission time for late penalties.
+
+Make sure you receive the emails related to your repository! Your project feedback will be given as comment on the pull request. When you receive the feedback, you can address problems or simply comment that you have read the feedback. 
+AFTER receiving and answering the feedback, merge you PR to master. Your project only counts as complete once this is done.
